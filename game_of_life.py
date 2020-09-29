@@ -19,7 +19,7 @@ from scipy.ndimage import convolve
 neighbors = convolve(board, kernel, mode='constant')
 print(neighbors)
 
-Next cell contains the heart of Game of Life: computing then next step. As inputs it takes the board as well as the map of neighbors. 
+#Next cell contains the heart of Game of Life: computing then next step. As inputs it takes the board as well as the map of neighbors. 
 
 def next_step(board, neighbors):
   board_next = np.zeros((10,10))
@@ -35,7 +35,7 @@ def next_step(board, neighbors):
         board_next[i,j] = 0
   return board_next
 
-Next cell contains a function which prints out subsequent states of the 'Game of Life'. It has parameter sessions - number of steps we want and parameter - probability of a cell being alive in the state of inicialization. 
+#Next cell contains a function which prints out subsequent states of the 'Game of Life'. It has parameter sessions - number of steps we want and parameter - probability of a cell being alive in the state of inicialization. 
 
 def print_lot(sessions, parameter,size):
   board = np.zeros((size,size))
